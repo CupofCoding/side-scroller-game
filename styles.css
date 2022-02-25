@@ -1,0 +1,70 @@
+*{
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+#game-container{
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+    width: 80vh;
+    border: 2px 2px black;
+}
+
+.score{
+    position: absolute;
+    font-size: 1em;
+    top: 1em;
+    right: 1em;
+}
+
+.start-text{
+    position: absolute;
+    font-size: 1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden{
+    display: none;
+}
+
+.floor{
+    position: absolute;
+    width: 100vh;
+    bottom: 0;
+    --left: 0;
+    left: calc(var(--left) * 1%);
+}
+
+.character{
+    position: absolute;
+    left: 3%;
+    height: 30%;
+    --bottom: 0;
+    bottom: calc(var(--bottom * 1%));
+}
+
+.obstacle{
+    position: absolute;    
+    height: 30%;
+    left: calc(var(--left) * 1%);
+    bottom: calc(var(--left * 1%));
+}
+
+.enemy{
+    position: absolute;
+    height: 30%;    
+    left: calc(var(--left) * 1%);
+    bottom: calc(var(--bottom * 1%));
+}
