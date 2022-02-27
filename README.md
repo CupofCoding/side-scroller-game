@@ -30,3 +30,10 @@ This milestone project takes place at the end of the web designer unit of the pr
 - A link to your Github repository, so we can see the progress on your game
 
 ## Requirements:
+### Zombie game
+- Backgound needs to loop and pan persistently to the right. 
+- Needs a way to keep score; upper located right 
+- Needs a way to keep track of lives (3 hearts/5 hearts game over condition). 
+- Character needs to be stationary; in order to allow character to jump, there has to be logic for the character to persistently be falling and obstructed by the ground. 
+- Character needs a swinging motion, enemy needs to register hit then death animations. 
+- Enemy needs to randomize 1 hit or 2 hits to die; 2 hits requires stagger then proceeding forward animation. (Rule #2: DoubleTap)
