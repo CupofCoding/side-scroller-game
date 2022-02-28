@@ -39,7 +39,7 @@ body{
     display: none;
 }
 
-.floor{
+.background{
     position: absolute;
     width: 100vh;
     bottom: 0;
