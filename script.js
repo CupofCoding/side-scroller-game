@@ -1,3 +1,5 @@
+import { setupBackground, updateBackground, setupBackground } from './background.js'
+
 const screen_width = 100    //world width ratio
 const screen_height = 30    //world height ratio
 
@@ -23,13 +25,23 @@ function setGameScreen() {
 
 //movement update loop based on screen refresh rates; makes it consistent in case of lag
 
-let timeLapse = 0
+let timeLapse //empty variable
 
 function update(time) {
+    //timer doesn't start till game starts
+    if (timeLapse == null) {
+        timeLapse = time 
+        window.requestAnimationFrame(update)
+        return
+    }
     const timeFrame = time - timeLapse
-    console.log(timeFrame)
+    // console.log(timeFrame)
+    updateBackground(timeFrame)
     
     timeLapse = time 
     window.requestAnimationFrame(update)
 }
 window.requestAnimationFrame(update)
+
+//
+setupBackground()

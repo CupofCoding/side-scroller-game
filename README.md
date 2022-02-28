@@ -9,7 +9,7 @@ This milestone project takes place at the end of the web designer unit of the pr
 - This is a solo project!
 - This game must run in a web browser
 
-### Game Project Requirements
+### Game Project Requirements:
 - This game can be designed for 2 or more players (PvP) or 1 player (PvE)
 - The second player in a PvP game can be a person or an AI
 - For multi-player games, turns should switch appropriately between players
@@ -21,20 +21,27 @@ This milestone project takes place at the end of the web designer unit of the pr
 - The HTML code should use sematic tags
 - The game should have a Readme.md file in the Github repository that describes the inspiration for the game, explains the controls and how to play the game, lists the technologies used to build the game, and addresses any outstanding bugs or unfinished functionality
 
-### Bonus Ideas
+### Bonus Ideas:
 - Make persistent scores in your browser's localStorage
 - Add interesting music or sound effects to your game
 
-### Deliverables
+### Deliverables:
 - A link to your game, which is deployed somewhere on the internet
 - A link to your Github repository, so we can see the progress on your game
 
 ## Requirements:
-### Zombie game
-- Backgound needs to loop and pan persistently to the right. 
+### Zombie game:
+- Backgound needs to loop and pan persistently to the right based on time elapsed. 
 - Needs a way to keep score; upper located right 
 - Needs a way to keep track of lives (3 hearts/5 hearts game over condition). 
 - Character needs to be stationary; in order to allow character to jump, there has to be logic for the character to persistently be falling and obstructed by the ground. 
 - Character needs a swinging motion, enemy needs to register hit then death animations. 
 - Enemy needs to randomize 1 hit or 2 hits to die; 2 hits requires stagger then proceeding forward animation. (Rule #2: DoubleTap)
+- if possible, melee weapon/banjo and then shotgun; enemy drops bullets by chance on death
 - Need to create a way to add points to score; enemy dies; replace with floating points. 
+
+- if extra time; create retire function; animations based on score; get into Car and drive off; no more zombie spawns; get twinkies
+
+#### Scoring Criteria:
+- Higher time = higher score
+- Zombie dies; add points - if not too difficult then chain combo? 
