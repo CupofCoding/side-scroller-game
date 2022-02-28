@@ -1,7 +1,7 @@
 const screen_width = 100    //world width ratio
 const screen_height = 30    //world height ratio
 
-//scaling game screen 
+//scaling game screen so it doesn't scale wierdly 
 const gameContainer = document.querySelector('[data-game-container]')
 
 setGameScreen()
@@ -20,3 +20,16 @@ function setGameScreen() {
     gameContainer.style.width = `${screen_width * gameToScreenScale}px`
     gameContainer.style.height = `${screen_height * gameToScreenScale}px`
 }
+
+//movement update loop based on screen refresh rates; makes it consistent in case of lag
+
+let timeLapse = 0
+
+function update(time) {
+    const timeFrame = time - timeLapse
+    console.log(timeFrame)
+    
+    timeLapse = time 
+    window.requestAnimationFrame(update)
+}
+window.requestAnimationFrame(update)
