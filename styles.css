@@ -21,16 +21,20 @@ body{
     border: 2px 2px black;    
 }
 
-.score{
+.score, .score-title{
     position: absolute;
     font-size: 1em;
     top: 1em;
     right: 1em;
 }
 
+.score{
+    top: 2em;
+}
+
 .start-text{
     position: absolute;
-    font-size: 1em;
+    font-size: 2em;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

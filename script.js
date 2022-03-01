@@ -1,4 +1,6 @@
 import { setupBackground, updateBackground } from './background.js'
+// import { setupChar, updateChar } from './character.js'
+// import { setupEnemy, updateEnemy, setupObstacle, updateObstacle } from './obstacles.js'
 
 const screen_width = 100    //world width ratio
 const screen_height = 30    //world height ratio
@@ -6,6 +8,8 @@ const screen_height = 30    //world height ratio
 //scaling game screen so it doesn't scale wierdly 
 const gameContainer = document.querySelector('[data-game-container]')
 const scoreElement = document.querySelector('[data-score]')
+const startElement = document.querySelector('[data-start]')
+const startBackground = document.querySelector('[data-background-start]')
 
 
 setGameScreen()
@@ -40,6 +44,9 @@ function update(time) {
     console.log(timeFrame)
     updateBackground(timeFrame)
     updateScore(timeFrame)
+    // updateChar(timeFrame)
+    // updateEnemy(timeFrame)
+    // updateObstacle(timeFrame)
     
     timeLapse = time 
     window.requestAnimationFrame(update)
@@ -51,16 +58,25 @@ document.addEventListener("keydown", startSpawn, { once: true })    //has to be 
 
 //scoring function
 function updateScore(timeFrame){
-    score += timeFrame * 0.01    //Time Elapsed added to score
+    score += timeFrame * 0.0025    //Time Elapsed added to score
     scoreElement.textContent = Math.floor(score)    //rounds the score so there's no decimals
 }
 
 function startSpawn() {
-    setupBackground()
-    timeLapse = null    //if time is null then ground shouldn't move
-    score = 0   //reset score to 0
+    timeLapse = null    //if time is null then ground shouldn't move........why does the ground keep looping.... 
+    score = 0   //set score to 0 when starting.... need to fix NaN display     
+    setupBackground()   //call function that loops background based on CSS
+    // setupChar()
+    // setupEnemy()
+    // setupObstacle()
+    scoreElement.classList.remove("hidden")
+    startElement.classList.add("hidden")
+    startBackground.classList.add("hidden")
     window.requestAnimationFrame(update)
 }
 
-//call function that loops background based on CSS
-// setupBackground()
+//Need game over conditions
+
+//Need Highest Score 
+
+//Retire 
