@@ -29,8 +29,7 @@ This milestone project takes place at the end of the web designer unit of the pr
 - A link to your game, which is deployed somewhere on the internet
 - A link to your Github repository, so we can see the progress on your game
 
-## Requirements:
-### Zombie game:
+## Requirements for Zombie game:
 - Backgound needs to loop and pan persistently to the right based on time elapsed. 
 - Needs a way to keep score; upper located right 
 - Needs a way to keep track of lives (3 hearts/5 hearts game over condition). 

@@ -1,4 +1,4 @@
-import { setupBackground, updateBackground, setupBackground } from './background.js'
+import { setupBackground, updateBackground } from './background.js'
 
 const screen_width = 100    //world width ratio
 const screen_height = 30    //world height ratio
