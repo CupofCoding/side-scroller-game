@@ -36,8 +36,9 @@ let score
 function update(time) {
     //timer doesn't start till game starts
     if (timeLapse == null) {
+        timeLapse = 0
         timeLapse = time 
-        window.requestAnimationFrame(update)
+        window.requestAnimationFrame(update)    //time counter
         return
     }
     const timeFrame = time - timeLapse

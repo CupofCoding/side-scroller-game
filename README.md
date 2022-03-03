@@ -39,8 +39,13 @@ This milestone project takes place at the end of the web designer unit of the pr
 - if possible, melee weapon/banjo and then shotgun; enemy drops bullets by chance on death
 - Need to create a way to add points to score; enemy dies; replace with floating points. 
 
-- if extra time; create retire function; animations based on score; get into Car and drive off; no more zombie spawns; get twinkies
-
 #### Scoring Criteria:
 - Higher time = higher score
 - Zombie dies; add points - if not too difficult then chain combo? 
+
+#### Bonus:
+- Sounds
+- Speed Run function; speed increases incrementally 
+- Retire; you deserve to live and ending is based on your score; animations based on score; get into Car and drive off; no more zombie spawns; get twinkies
+
+- Figure out how to do Zombie Kill of the week based on combo? 
