@@ -9,7 +9,7 @@ const runSpeed = .025
 const backgroundElements = document.querySelectorAll("[data-background]")
 
 //ground needs to loop
-export function setupBackground () {
+export function setupBackground() {
     setCustomProperty(backgroundElements[0], "--left", 0)
     setCustomProperty(backgroundElements[1], "--left", 300)     //width is set to 300% in CSS
 }

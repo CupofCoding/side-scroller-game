@@ -1,5 +1,5 @@
-import { setupBackground, updateBackground } from './background.js'
-// import { setupChar, updateChar } from './character.js'
+import { setupBackground, updateBackground } from './background.js' //cannot use import statement outside a module error?
+import { setupChar, updateChar } from './character.js'
 // import { setupEnemy, updateEnemy, setupObstacle, updateObstacle } from './obstacles.js'
 
 const screen_width = 100    //world width ratio
@@ -42,10 +42,10 @@ function update(time) {
         return
     }
     const timeFrame = time - timeLapse
-    console.log(timeFrame)
+    // console.log(timeFrame)
     updateBackground(timeFrame)
     updateScore(timeFrame)
-    // updateChar(timeFrame)
+    updateChar(timeFrame)
     // updateEnemy(timeFrame)
     // updateObstacle(timeFrame)
     
@@ -67,7 +67,7 @@ function startSpawn() {
     timeLapse = null    //if time is null then ground shouldn't move........why does the ground keep looping.... 
     score = 0   //set score to 0 when starting.... need to fix NaN display     
     setupBackground()   //call function that loops background based on CSS
-    // setupChar()
+    setupChar()
     // setupEnemy()
     // setupObstacle()
     scoreElement.classList.remove("hidden")

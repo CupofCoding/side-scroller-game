@@ -1,15 +1,15 @@
-import { incrementCustomProperty, getCustomProperty, setCustomProperty } from "./CustomPropertyUpdate"
+import { incrementCustomProperty, getCustomProperty, setCustomProperty } from "./CustomPropertyUpdate.js"
 
-const charElement = document.querySelector("data-character")
+const charElement = document.querySelector("[data-character]")
 const char_sprite_frame = 8 //number of sprites 
 const char_frame_time = 100 //milliseconds
 
 //jump logic; velocity - char needs to go up at a rate but slow down at the arch as time passes. Gravity = rate of decline. If it hits 0 then character "falls"
 const jump_speed = .45  //affects jump distance
 const gravity = .01     //rate of deceleration 
-const swing = .45
-const ammo
-const health
+// const swing = .45
+// const ammo
+// const health
 
 let char_sprite     
 let charYAxis   //related character jumping function jumpAction
@@ -43,13 +43,10 @@ function runAction(timeFrame, runSpeed) {
 
     if (currentFrameTime >= char_frame_time) {
         char_sprite = (char_sprite + 1) % char_sprite_frame     //takes current frame and adds 1 and the modulus iterates through the sprite count and loops it back
-        charElement.src = `./assets/char_walk${char_sprite}.png`    //source & iteration
+        charElement.src = `./assets/char_walk_0${char_sprite}.png`    //source & iteration
         currentFrameTime -= char_frame_time //resets and goes back towards 0
-
     }
-
     currentFrameTime += timeFrame * runSpeed
-
 }
 
 function jumpAction(timeFrame) {
