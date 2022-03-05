@@ -1,4 +1,4 @@
-import { setupBackground, updateBackground } from './background.js' //cannot use import statement outside a module error?
+import { setupBackground, updateBackground } from './background.js'
 import { setupChar, updateChar } from './character.js'
 // import { setupEnemy, updateEnemy, setupObstacle, updateObstacle } from './obstacles.js'
 
@@ -34,14 +34,14 @@ let timeLapse //empty variable
 let score
 
 function update(time) {
-    //timer doesn't start till game starts
+    //score timer doesn't start till game starts
     if (timeLapse == null) {
         timeLapse = 0
         timeLapse = time 
         window.requestAnimationFrame(update)    //time counter
         return
     }
-    const timeFrame = time - timeLapse
+    const timeFrame = time - timeLapse  //passage of time
     // console.log(timeFrame)
     updateBackground(timeFrame)
     updateScore(timeFrame)

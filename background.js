@@ -1,8 +1,4 @@
-import { 
-    getCustomProperty, 
-    setCustomProperty, 
-    incrementCustomProperty
-} from "./CustomPropertyUpdate.js"
+import { getCustomProperty, setCustomProperty, incrementCustomProperty } from "./CustomPropertyUpdate.js"
 
 //ground updates by persistently panning to the left
 const runSpeed = .025

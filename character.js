@@ -37,13 +37,13 @@ export function updateChar(timeFrame, runSpeed) {
 
 function runAction(timeFrame, runSpeed) {
     if (isJumping) {
-        charElement.src = `./assets/char_model/char_walk_06.png`
+        charElement.src = `./assets/char_model/char_walk_6.png`
         return
     }
 
     if (currentFrameTime >= char_frame_time) {
         char_sprite = (char_sprite + 1) % char_sprite_frame     //takes current frame and adds 1 and the modulus iterates through the sprite count and loops it back
-        charElement.src = `./assets/char_walk_0${char_sprite}.png`    //source & iteration
+        charElement.src = `./assets/char_model/char_walk_${char_sprite}.png`    //source & iteration
         currentFrameTime -= char_frame_time //resets and goes back towards 0
     }
     currentFrameTime += timeFrame * runSpeed
@@ -56,7 +56,7 @@ function jumpAction(timeFrame) {
     incrementCustomProperty(charElement, "--bottom", charYAxis * timeFrame)
     
     //CHAR NEEDS TO STOP WHEN HE TOUCHES THE "FLOOR"
-    if (getCustomProperty(charElement, "--bottom") <=0) {
+    if (getCustomProperty(charElement, "--bottom") <= 0) {
         setCustomProperty(charElement, "--bottom", 0) 
         isJumping = false
     }
