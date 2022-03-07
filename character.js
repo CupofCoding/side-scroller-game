@@ -37,14 +37,14 @@ export function updateChar(timeFrame, runSpeed) {
 
 function runAction(timeFrame, runSpeed) {
     if (isJumping) {
-        charElement.src = `./assets/char_model/char_walk_6.png` //sprite changed appropriately 
+        charElement.src = `./assets/char_model/jump/char_jump_00.png` //sprite changed appropriately 
         return
     }
 
     if (currentFrameTime >= char_frame_time) {
         //this is broken....might have to rethink this one
         char_sprite = (char_sprite + 1) % char_sprite_frame     //takes current frame and adds 1 and the modulus iterates through the sprite count and loops it back
-        charElement.src = `./assets/char_model/char_walk_${char_sprite}.png`    //source & iteration
+        charElement.src = `./assets/char_model/move/char_walk_${char_sprite}.png`    //source & iteration
         currentFrameTime -= char_frame_time //resets and goes back towards 0
     }
     currentFrameTime += timeFrame * runSpeed
