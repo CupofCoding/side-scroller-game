@@ -60,7 +60,9 @@ export function setCharLose() {
 
 function runAction(timeFrame, fasterRun) {
     if (isJumping) {
-        charElement.src = `./assets/char_model/jump/char_jump_00.png` //sprite changed appropriately 
+        char_sprite = (char_sprite + 1) % char_sprite_frame
+        charElement.src = `./assets/char_model/jump/char_jump_0${char_sprite}.png` //sprite changed appropriately 
+        currentFrameTime -= char_frame_time
         return
     }
 
