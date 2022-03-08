@@ -1,7 +1,8 @@
 import { getCustomProperty, setCustomProperty, incrementCustomProperty } from "./CustomPropertyUpdate.js"
+import { fasterRun } from "./script.js"
 
 //ground updates by persistently panning to the left
-const runSpeed = .01
+const runSpeed = .05
 const backgroundElements = document.querySelectorAll("[data-background]")
 
 //ground needs to loop
@@ -13,7 +14,7 @@ export function setupBackground() {
 export function updateBackground(timeFrame) {
     //taking CSS variable and converting to JS then send back to CSS variable
     backgroundElements.forEach(background => {  //function to move the gound left everytime time is updated
-        incrementCustomProperty(background, "--left", timeFrame * runSpeed * -1)   //-1 required so it goes left
+        incrementCustomProperty(background, "--left", timeFrame * fasterRun * runSpeed * -1)   //-1 required so it goes left
 
         //if first image ends, then loop second image
         if (getCustomProperty(background, "--left") <= -300) {   //-300 for the starting location

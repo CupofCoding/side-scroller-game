@@ -56,23 +56,59 @@ body{
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 18%;
-    --bottom: 18;
+    bottom: 19%;
+    --bottom: 19;
     bottom: calc(var(--bottom * 1%));
 }
 
-.obstacle{
+.jump{
+    position: absolute;
+    left: 5%;
+    height: 30%;
+    bottom: 19%;
+    --bottom: 19;
+    bottom: calc(var(--bottom * 1%));
+}
+
+.move{
+    position: absolute;
+    left: 5%;
+    height: 30%;
+    bottom: 19%;
+    --bottom: 19;
+    bottom: calc(var(--bottom * 1%));
+}
+
+.obstacle, .crate{
     position: absolute;    
     height: 30%;
     left: calc(var(--left) * 1%);
-    bottom: 18;
+    bottom: 19;
     bottom: calc(var(--left * 1%));
 }
 
 .enemy{
     position: absolute;
     height: 30%;
-    bottom: 18;
+    bottom: 19;
     left: calc(var(--left) * 1%);
     bottom: calc(var(--bottom * 1%));
+}
+
+@keyframes move {
+    0% {src: "./assets/char_model/move/char_walk_01";}
+    20% {src: "./assets/char_model/move/char_walk_02";}
+    40% {src: "./assets/char_model/move/char_walk_03";}
+    60% {src: "./assets/char_model/move/char_walk_04";}
+    80% {src: "./asssets/char_model/move/char_walk_03";}
+    100% {src: "./assets/char_model/move/char_walk_02";}    
+}
+
+@keyframes jump {
+    0% {src: "./asssets/char_model/jump/char_jump_01";}
+    20% {src: "./asssets/char_model/jump/char_jump_02";}
+    40% {src: "./asssets/char_model/jump/char_jump_03";}
+    60% {src: "./asssets/char_model/jump/char_jump_04";}
+    80% {src: "./asssets/char_model/jump/char_jump_03";}
+    100% {src: "./asssets/char_model/jump/char_jump_02";}    
 }
