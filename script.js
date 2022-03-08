@@ -89,9 +89,12 @@ function gameOver() {
         gameover.classList.remove("hidden")        
         document.addEventListener("keydown", startSpawn, { once: true })    //game restarts
     }, 1000)
+    //Need Highest Score 
+    // localStorage.setItem('score', score)
+    // localStorage.getItem('score')
 }
 
-//Need Highest Score 
+
 
 //Retire 
 
