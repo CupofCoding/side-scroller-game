@@ -4,11 +4,14 @@ import { fasterRun } from "./script.js"
 //ground updates by persistently panning to the left
 const runSpeed = .05
 const backgroundElements = document.querySelectorAll("[data-background]")
+// const cloudElements = document.querySelectorAll("[data-clouds]")
+// const grassElements = document.querySelectorAll("[data-grass]")
+// const shrubsElements = document.querySelectorAll("[data-shrubs]")
 
 //ground needs to loop
 export function setupBackground() {
     setCustomProperty(backgroundElements[0], "--left", 0)
-    setCustomProperty(backgroundElements[1], "--left", 300)     //width is set to 300% in CSS
+    setCustomProperty(backgroundElements[1], "--left", 300)     //width is set to 300% in CSS    
 }
 
 export function updateBackground(timeFrame) {
@@ -18,7 +21,7 @@ export function updateBackground(timeFrame) {
 
         //if first image ends, then loop second image
         if (getCustomProperty(background, "--left") <= -300) {   //-300 for the starting location
-            incrementCustomProperty(background, "--left", 590)  //this will be starting at the end of the other element
+            incrementCustomProperty(background, "--left", 600)  //this will be starting at the end of the other element
         }
     })
 }

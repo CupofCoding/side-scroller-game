@@ -35,7 +35,7 @@ body{
 .start-text{
     position: absolute;
     font-size: 2em;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -52,12 +52,24 @@ body{
     left: calc(var(--left) * 1%);
 }
 
+.clouds {
+    bottom: 60%;
+}
+
+.shrubs {
+    bottom: 45%;
+}
+
+.grass {
+    bottom: 46.25%;    
+}
+
 .character{
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 19%;
-    --bottom: 19;
+    bottom: 30%;
+    --bottom: 30;
     bottom: calc(var(--bottom * 1%));
 }
 
@@ -65,26 +77,34 @@ body{
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 19%;
-    --bottom: 19;
-    bottom: calc(var(--bottom * 1%));
+    bottom: 40%;
+    --bottom: 40;
+    bottom: calc(var(--bottom * 1%));        
 }
 
 .move{
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 19%;
-    --bottom: 19;
+    bottom: 30%;
+    --bottom: 30;
     bottom: calc(var(--bottom * 1%));
 }
 
 .obstacle, .crate{
     position: absolute;    
-    height: 30%;
+    height: 10%;
     left: calc(var(--left) * 1%);
-    bottom: 19;
+    bottom: 30%;
     bottom: calc(var(--left * 1%));
+}
+
+.gameover{
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    height: 20%;
+    bottom: 65%;        
 }
 
 .enemy{

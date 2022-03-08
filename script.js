@@ -10,6 +10,7 @@ const gameContainer = document.querySelector('[data-game-container]')
 const scoreElement = document.querySelector('[data-score]')
 const startElement = document.querySelector('[data-start]')
 const startBackground = document.querySelector('[data-background-start]')
+const gameover = document.querySelector('[data-gameover]')
 
 //difficulty scaling increment
 const RUN_SPEED_INCREASE = 0.00001
@@ -47,7 +48,7 @@ function updateFasterRun(timeFrame) {
 }
 
 function updateScore(timeFrame){
-    score += timeFrame * 0.0025    //Time Elapsed added to score
+    score += timeFrame * 0.003    //Time Elapsed added to score
     scoreElement.textContent = Math.floor(score)    //rounds the score so there's no decimals
 }
 
@@ -85,10 +86,9 @@ function gameOver() {
     setCharLose()
     //avoid restarting game as soon as game ends
     setTimeout(() => {
+        gameover.classList.remove("hidden")        
         document.addEventListener("keydown", startSpawn, { once: true })    //game restarts
-        startBackground.classList.remove("hidden")
-
-    }, 100)
+    }, 1000)
 }
 
 //Need Highest Score 
