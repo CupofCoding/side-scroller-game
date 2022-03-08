@@ -113,6 +113,12 @@ body{
     bottom: 65%;        
 }
 
+.restart{
+    position: fixed;
+    top: 6.5vh;
+    right: 1em;
+}
+
 .enemy{
     position: absolute;
     height: 30%;
