@@ -2,7 +2,7 @@ import { getCustomProperty, setCustomProperty, incrementCustomProperty } from ".
 import { fasterRun } from "./script.js"
 
 //ground updates by persistently panning to the left
-const runSpeed = .035
+const runSpeed = .03
 const backgroundElements = document.querySelectorAll("[data-background]")
 // const cloudElements = document.querySelectorAll("[data-clouds]")
 // const grassElements = document.querySelectorAll("[data-grass]")

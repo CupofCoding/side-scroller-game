@@ -1,6 +1,6 @@
 import { getCustomProperty, incrementCustomProperty, setCustomProperty } from "./CustomPropertyUpdate.js"
 
-const runSpeed = .035    //always same as ground speed to not look like it's sliding
+const runSpeed = .03    //always same as ground speed to not look like it's sliding
 
 //obstacle spawn range
 const crate_interval_min = 500
