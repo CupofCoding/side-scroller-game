@@ -63,11 +63,11 @@ function runAction(timeFrame, fasterRun) {
     if (isJumping) {
         char_sprite = (char_sprite + 1) % char_jump_frame
         charElement.src = `./assets/char_model/jump/char_jump_0${char_sprite}.png` //sprite changed appropriately 
-        currentFrameTime -= char_frame_time - 75    //so he can start walking sooner
+        currentFrameTime -= char_frame_time - 250    //so he can start walking sooner
         charElement.classList.add("jump")
         setTimeout(() => {
             charElement.classList.remove("jump")
-        }, 275 * fasterRun)
+        }, 300 * fasterRun)
         // return
     }
 
