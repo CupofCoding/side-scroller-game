@@ -1,9 +1,9 @@
-/* Error: Undefined operation "--bottom * 1%".
+/* Error: Undefined variable.
  *     ,
- * 280 |     bottom: calc(var(--bottom * 1%));
- *     |                      ^^^^^^^^^^^^^
+ * 304 |     left: calc(var($left) * 1%);
+ *     |                    ^^^^^
  *     '
- *   styles.scss 280:22  root stylesheet */
+ *   styles.scss 304:20  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Undefined operation "--bottom * 1%".\a     \2577 \a 280 \2502      bottom: calc(var(--bottom * 1%));\d\a     \2502                       ^^^^^^^^^^^^^\a     \2575 \a   styles.scss 280:22  root stylesheet';
+  content: "Error: Undefined variable.\a     \2577 \a 304 \2502      left: calc(var($left) * 1%);\d\a     \2502                     ^^^^^\a     \2575 \a   styles.scss 304:20  root stylesheet";
 }
