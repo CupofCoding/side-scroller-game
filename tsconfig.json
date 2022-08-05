@@ -1,7 +1,10 @@
 {
     "compilerOptions": {
-        "target": "ES3",
+        "outDir": "./built",
         "watch": true,
+        "allowJs": true,
+        "target": "ES5",
         "lib": ["dom", "es2017"]
-    }
+    },
+    "include": ["./src/**/*"]
 }

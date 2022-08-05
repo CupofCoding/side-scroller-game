@@ -1,4 +1,5 @@
 # side-scroller-game
+- Futurama logic. Your character technically doesn't move and the world moves towards you but the idea is that you're hopping over objects. 
 
 ## Main Concept: 
 Portfolio Creation - Demonstrating my web development skills by building a webpage.
