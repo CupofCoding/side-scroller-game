@@ -1,6 +1,8 @@
 :root {
   --left: 0;
+  --left-calc: var(--left * 1%);
   --bottom: 40;
+  --bottom-calc: var(--bottom * 1%);
 }
 
 * {
@@ -172,7 +174,7 @@ html, body {
   left: 5%;
   height: 30%;
   bottom: 30%;
-  bottom: calc(var(--bottom) * 1%);
+  bottom: calc(--bottom-calc);
 }
 
 .jump {
@@ -180,7 +182,7 @@ html, body {
   left: 5%;
   height: 30%;
   bottom: 40%;
-  bottom: calc(var(--bottom) * 1%);
+  bottom: calc(--bottom-calc);
 }
 
 .move {
@@ -188,7 +190,7 @@ html, body {
   left: 5%;
   height: 30%;
   bottom: 30%;
-  bottom: calc(var(--bottom) * 1%);
+  bottom: calc(--bottom-calc);
 }
 
 .obstacle, .crate {
@@ -196,7 +198,7 @@ html, body {
   height: 10%;
   left: calc(var(--left) * 1%);
   bottom: 30%;
-  bottom: calc(var(--left) * 1%);
+  bottom: calc(--left-calc);
   padding: 0;
 }
 
@@ -219,7 +221,7 @@ html, body {
   height: 30%;
   bottom: 19;
   left: calc(var(--left) * 1%);
-  bottom: calc(var(--left) * 1%);
+  bottom: calc(--left-calc);
 }
 
 @keyframes move {
