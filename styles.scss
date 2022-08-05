@@ -36,13 +36,6 @@
 //     @include ghost-button(“Trebuchet”, 12px, #ffffff, 5px, #34dec6, 4px, 300ms, #000000 );
 //     }
 
-*{
-    user-select: none;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 $color-dark: #333344;
 $sky: linear-gradient(
     rgba(13, 191, 223, 0.9),
@@ -50,6 +43,17 @@ $sky: linear-gradient(
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.3)
     );
+$background-left: 0;
+$character-bottom: 30;
+$jump-bottom: 40;
+$move-bottom: 30;
+
+*{
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html, body
 {
@@ -254,9 +258,8 @@ html, body
 .background{
     position: absolute;
     width: 300%;    
-    bottom: 0;
-    --left: 0;
-    left: calc(var(--left) * 1%);
+    bottom: 0;    
+    left: calc(var($background-left) * 1%);
 }
 
 .clouds {
@@ -275,35 +278,32 @@ html, body
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 30%;
-    --bottom: 30;
-    bottom: calc(var(--bottom * 1%));
+    bottom: 30%;    
+    bottom: calc(var($character-bottom * 1%));
 }
 
 .jump{
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 40%;
-    --bottom: 40;
-    bottom: calc(var(--bottom * 1%));        
+    bottom: 40%;    
+    bottom: calc(var($jump-bottom * 1%));        
 }
 
 .move{
     position: absolute;
     left: 5%;
     height: 30%;
-    bottom: 30%;
-    --bottom: 30;
-    bottom: calc(var(--bottom * 1%));
+    bottom: 30%;    
+    bottom: calc(var($move-bottom * 1%));
 }
 
 .obstacle, .crate{
     position: absolute;    
     height: 10%;
-    left: calc(var(--left) * 1%);
+    left: calc(var($background-left) * 1%);
     bottom: 30%;
-    bottom: calc(var(--left * 1%));
+    bottom: calc(var($background-left * 1%));
     padding: 0;
 }
 
@@ -325,8 +325,8 @@ html, body
     position: absolute;
     height: 30%;
     bottom: 19;
-    left: calc(var(--left) * 1%);
-    bottom: calc(var(--bottom * 1%));
+    left: calc(var($background-left) * 1%);
+    bottom: calc(var($jump-bottom * 1%));
 }
 
 @keyframes move {
