@@ -1,3 +1,8 @@
+:root {
+  --left: 0;
+  --bottom: 40;
+}
+
 * {
   user-select: none;
   box-sizing: border-box;
@@ -147,7 +152,7 @@ html, body {
   position: absolute;
   width: 300%;
   bottom: 0;
-  left: calc(var(0) * 1%);
+  left: calc(var(--left) * 1%);
 }
 
 .clouds {
@@ -167,7 +172,7 @@ html, body {
   left: 5%;
   height: 30%;
   bottom: 30%;
-  bottom: calc(var(30%));
+  bottom: calc(var(--bottom) * 1%);
 }
 
 .jump {
@@ -175,7 +180,7 @@ html, body {
   left: 5%;
   height: 30%;
   bottom: 40%;
-  bottom: calc(var(40%));
+  bottom: calc(var(--bottom) * 1%);
 }
 
 .move {
@@ -183,15 +188,15 @@ html, body {
   left: 5%;
   height: 30%;
   bottom: 30%;
-  bottom: calc(var(30%));
+  bottom: calc(var(--bottom) * 1%);
 }
 
 .obstacle, .crate {
   position: absolute;
   height: 10%;
-  left: calc(var(0) * 1%);
+  left: calc(var(--left) * 1%);
   bottom: 30%;
-  bottom: calc(var(0%));
+  bottom: calc(var(--left) * 1%);
   padding: 0;
 }
 
@@ -213,8 +218,8 @@ html, body {
   position: absolute;
   height: 30%;
   bottom: 19;
-  left: calc(var(0) * 1%);
-  bottom: calc(var(40%));
+  left: calc(var(--left) * 1%);
+  bottom: calc(var(--left) * 1%);
 }
 
 @keyframes move {
